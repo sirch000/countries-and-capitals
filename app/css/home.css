@@ -1,0 +1,50 @@
+.home-container {
+    position: fixed;
+    display: block;
+    height: 80%;
+    width: 50%;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    margin: 0px;
+}
+
+.globe-container {
+    position: relative;
+    display: inline-block;
+    height: 30%;
+    width: 60%;
+    left: 50%;
+    /*border: 1px solid black;*/
+    transform: translate(-50%, 0%);
+}
+
+h3 {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    text-align: center;
+    color: #444444;
+
+}
+
+#globe-main {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+#globe-main:hover {
+    cursor: pointer;
+}
+
+#globe-main:active {
+    height: 90px;
+    width: 90px;
+}

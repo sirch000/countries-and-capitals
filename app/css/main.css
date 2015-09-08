@@ -3,6 +3,7 @@
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none; 
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body,
@@ -11,99 +12,29 @@ html {
     margin: 0px;
 }
 
-body {
-    background-image: url("../img/world-flags-transparent.png");
-}
-
 .header {
     display: block;
     position: fixed;
-    right:0;
-    left:0;
-    top: 0;
-    height: 78px;
-    background-color: black;
-    color: white;
-    min-width: 100%;
-    width: 100%;
+    height: 60px;
+    min-width: 50%;
+    width: 50%;
     z-index: 99998;
-    font-family: 'Source Sans Pro', sans-serif;
-    text-align: center;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1 {
-    margin-top: 15px;
-    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 36px;
+    font-size: 32px;
+    text-align: center;
+    color: #444444;
 }
 
-.image-container {
-    position: fixed;
-    display: block;
-    height: 420px;
-    width: 420px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0px;
-    margin: 0px;
-}
-
-#globe-main {
-    position: relative;
-    height: 420px;
-    width: 420px;
-    padding: 0px;
-    margin: 0px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#globe-main:hover {
-    height: 440px;
-    width: 440px;
-    cursor: pointer;
-}
-
-#globe-main:active {
-    height: 430px;
-    width: 430px;
-}
-
-/*
-#shadow-container {
-    width: 255px;
-    height: 85px;
-    position: fixed;
-    display: block;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0px;
-    margin: 0px;
-}
-
-#shadow {
-    position: relative;
-    padding: 0px;
-    margin: 0px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}*/
-
-.footer {
-    display: block;
-    position: fixed;
-    bottom:0px;
-    right:0;
-    left:0;
-    height: 78px;
-    background-color: black;
-    min-width: 100%;
-    width: 100%;
-    z-index: 99998;
+hr {
+    width: 85%;
+    color: #444444;
 }

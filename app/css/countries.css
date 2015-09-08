@@ -1,0 +1,39 @@
+.countries-container {
+    position: fixed;
+    display: block;
+    height: 80%;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.countries-table {
+	overflow: auto;
+}
+
+th {
+	color: #FFFFFF;
+	font-weight: lighter;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	width: 140px;
+}
+
+td {
+	color: #3E3E3E;
+}
+
+table, th, td, tr, col {
+	border: none;
+	/*border: 2px solid #DDDDDD;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.heading {
+	background-color: #0074D9;
+}
