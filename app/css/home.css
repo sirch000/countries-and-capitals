@@ -1,13 +1,12 @@
 .home-container {
     position: fixed;
     display: block;
-    height: 80%;
+    height: 540px;
     width: 50%;
-    top: 54%;
+    margin-top: 285px;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0px;
-    margin: 0px;
 }
 
 .globe-container {
@@ -16,7 +15,6 @@
     height: 30%;
     width: 60%;
     left: 50%;
-    /*border: 1px solid black;*/
     transform: translate(-50%, 0%);
 }
 

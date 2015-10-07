@@ -5,23 +5,20 @@
     user-select: none; 
     font-family: 'Source Sans Pro', sans-serif;
 }
-
-body,
-html { 
-    height: 100%;
-    margin: 0px;
+body {
+    overflow: hidden;
 }
 
 .header {
     display: block;
-    position: fixed;
+    position: static;
+    margin-top: 2%;
     height: 60px;
     min-width: 50%;
     width: 50%;
     z-index: 99998;
-    top: 9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -35,6 +32,7 @@ h1 {
 }
 
 hr {
+    margin-top: 1%;
     width: 85%;
     color: #444444;
 }

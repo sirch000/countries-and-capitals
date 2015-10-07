@@ -1,39 +1,100 @@
-.countries-container {
-    position: fixed;
-    display: block;
-    height: 80%;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
+* {
+    overflow-h: hidden;
 }
 
-.countries-table {
-	overflow: auto;
+thead {
+    position: fixed;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0074D9;
+    color: #FFFFFF;
+    vertical-align: middle;
+    width: 1200px;
+    border: 1px solid #0074D9;
 }
 
 th {
-	color: #FFFFFF;
-	font-weight: lighter;
-	margin-left: auto;
-	margin-right: auto;
-	height: 40px;
-	width: 140px;
+    height: 40px;
+    vertical-align: middle;
+    width: 200px;
 }
 
 td {
 	color: #3E3E3E;
+    height: 40px;
+    text-align: center;
+    padding: 0px;
+    border: 1px solid #CCC;
+    width: 200px;
 }
 
-table, th, td, tr, col {
-	border: none;
-	/*border: 2px solid #DDDDDD;*/
-	margin-left: auto;
-	margin-right: auto;
+tr {
+    position: relative;
 }
 
-.heading {
-	background-color: #0074D9;
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    height: 460px;
+    width: 1200px;
+    table-layout: fixed;
+    overflow-y: hidden;
+}
+
+tbody {
+    margin-top: 45px;
+    display: block;
+    height: 452px;
+    width: 1200px;
+    overflow-y: auto;
+    border: 1px solid #CCC;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-color: #CCC
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px #CCC;
+    border-color: #CCC;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #999999;
+}
+/*
+.back-button-container {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 200px;
+    left: 50%;
+    margin-top: 50%
+    transform: translate(-50%, -50%);
+}*/
+
+#back-button {
+    position: relative;
+    height: 40px;
+    width: 100px;
+    padding: 0px;
+    left: 50%;
+    margin-top: 5px;
+    transform: translate(-50%, 50%);
+    border: 1px solid #0074D9;
+    color: #FFFFFF;
+    background-color: #0074D9;
+    font-size: inherit;
+}
+
+#back-button:hover {
+    cursor: pointer;
+}
+
+#back-button:active {
+
 }

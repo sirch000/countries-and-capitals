@@ -1,35 +1,32 @@
-<!--<div class="countries-container">
-	<div class="countries-data-header">
-	</div>
-	<div class="row">
-	</div>
-</div>-->
-
-<!--ifindexisdivisibleby2%==0-->
 <div class="header">
 	<h1>Countries & Capitals</h1>
 </div>
-<div class="countries-container">
-  <table class="countries-table">
-    <colgroup>
-    <col>
-    </col>
-    </colgroup>
-    <th class="heading"> Name </th>
-    <th class="heading"> Country Code </th>
-    <th class="heading"> Capital </th>
-    <th class="heading"> Area in km2 </th>
-    <th class="heading"> Population </th>
-    <th class="heading"> Continent </th>
-    <tr ng-repeat="country in countries | orderBy:'name'">
-      <td>{{country.name}}</td>
-      <td>{{country[1960] | number}}</td>
-      <td>{{country[1970] | number}}</td>
-      <td>{{country[1980] | number}}</td>
-      <td>{{country[1990] | number}}</td>
-      <td>{{country[2000] | number}}</td>
-      <td>{{country[2010] | number}}</td>
-      <td>{{Math.ceil((((country[2010] - country[1960]) / country[1960]) * 100))}}%</td>
-    </tr>
-  </table>
-</div>
+<table class="countries-table">
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Country Code</th>
+            <th>Capital</th>
+            <th>Area in km2</th>
+            <th>Population</th>
+            <th>Continent Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="country in countries | orderBy:'countryName'" ng-click="countryDetail(country)">
+            <td>{{country["countryName"]}}</td>
+            <td>{{country["countryCode"]}}</td>
+            <td>{{country["capital"]}}</td>
+            <td>{{country["areaInSqKm"] | number}}</td>
+            <td>{{country["population"] | number}}</td>
+            <td>{{country["continent"]}}</td>
+        </tr>
+    </tbody>
+</table>
+<a href="#/"><button id="back-button">Home</button></a>
