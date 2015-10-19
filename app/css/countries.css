@@ -29,6 +29,10 @@ td {
     width: 200px;
 }
 
+td:hover {
+    cursor: pointer;
+}
+
 tr {
     position: relative;
 }
@@ -66,16 +70,6 @@ tbody {
     border-radius: 8px;
     background-color: #999999;
 }
-/*
-.back-button-container {
-    position: relative;
-    display: block;
-    height: 40px;
-    width: 200px;
-    left: 50%;
-    margin-top: 50%
-    transform: translate(-50%, -50%);
-}*/
 
 #back-button {
     position: relative;

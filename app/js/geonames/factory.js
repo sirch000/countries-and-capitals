@@ -1,26 +1,33 @@
 'use strict';
 
-app.factory('GeoNames', ['$http',
-	function($http) {
-		var base = 'http://api.geonames.org';
-		var service = 'countryInfoJSON';
-		var username = 'teachme10code';
+app.factory('GeoNames', function($http) {
+    var base = 'http://api.geonames.org';
+    var username = 'teachme10code';
+    var config = {
+        'params': {
+            'username': username,
+            'callback': 'JSON_CALLBACK'
+        }
+    };
 
-		return {
-			'get': function() {
-				var url = base + '/' + service + '?';
-				var config = {
-					'params': {
-                        'username': username,
-						'callback': 'JSON_CALLBACK'
-					}
-				};
-				return $http.jsonp(url, config);
-			}
-		};
-	}
-]);
+    return {
 
+        'getCountries': function() {
+            var service = 'countryInfoJSON';
+            var url = base + '/' + service + '?';
+            return $http.jsonp(url, config);
+        },
 
-//capital info:
-//http://api.geonames.org/searchJSON?country=AF&name_equals=kabul&lang=en&maxRows=1&username=username
+        'getCapitalDetails': function(countryCode, capital) {
+            var service = 'searchJSON';
+            var url = base + '/' + service + '?country=' + countryCode + '&name_equals=' + capital + '&maxRows=1';
+            return $http.jsonp(url, config);
+        },
+
+        'getNeighbors': function(geoNameId) {
+            var service = 'neighboursJSON';
+            var url = base + '/' + service + '?geonameId=' + geoNameId;
+            return $http.jsonp(url, config);
+        }
+    };
+});

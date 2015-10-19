@@ -1,0 +1,64 @@
+#country-code {
+    position: static;
+    display: block;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#flag-container {
+    position: static;
+    display: block;
+    width: 604px;
+    height: 302px;
+    margin-top: 22%;
+    padding-bottom: 5px;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#flag.img,
+#map.img {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+#country-details-container {
+    position: static;
+    display: block;
+    width: 604px;
+    height: 302px;
+    margin-top: 0;
+    padding-bottom: 0px;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details {
+    width: 280px;
+    height: 280px;
+    display: inline-block;
+}
+
+#population,
+#area,
+#capital,
+#capital-population,
+#neighbors {
+    position: relative;
+    width: 280px;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+#map-container {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}

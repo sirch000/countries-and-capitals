@@ -19,7 +19,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="country in countries | orderBy:'countryName'" ng-click="countryDetail(country)">
+        <tr ng-repeat="country in countries | orderBy:'countryName'" ng-click="setCountryDetails(country)">
             <td>{{country["countryName"]}}</td>
             <td>{{country["countryCode"]}}</td>
             <td>{{country["capital"]}}</td>

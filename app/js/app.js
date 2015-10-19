@@ -8,13 +8,15 @@ var app = angular.module('app', ['ngRoute'])
         })
         .when('/countries', {
             templateUrl : './countries.html',
-            controller : 'GeoNamesController',
+            controller : 'CountriesController'
         })
         .when('/countries/country/:country', {
             templateUrl : './country-detail.html',
-            controller : 'GeoNamesController',
+            controller : 'CountryDetailsController'
         })
         .when('/error', {
 		    template : '<p>Error Page Not Found</p>'
-		});
+		})
+
+        .otherwise({ redirectTo: '/' });
     })
