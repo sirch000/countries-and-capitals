@@ -1,64 +1,80 @@
+#country-name {
+    height: auto;
+    width: auto;
+    margin: 20px 0 5px 0;
+    padding: 0;
+    text-align: center;
+}
+
 #country-code {
-    position: static;
-    display: block;
-    margin-top: 20px;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#main-details-container {
+    position: relative;
+    width: 447px;
+    min-width: 447px;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 2%);
 }
 
 #flag-container {
-    position: static;
-    display: block;
-    width: 604px;
-    height: 302px;
-    margin-top: 22%;
-    padding-bottom: 5px;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#flag.img,
-#map.img {
+img#flag,
+img#map {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
+    padding: 0;
 }
 
-#country-details-container {
-    position: static;
+img#map {
+    width: auto;
+    height: auto;
+}
+
+#details-container {
     display: block;
-    width: 604px;
-    height: 302px;
-    margin-top: 0;
-    padding-bottom: 0px;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    width: auto;
+    max-width: 442px;
+    height: auto;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 0;
 }
 
-.details {
-    width: 280px;
-    height: 280px;
-    display: inline-block;
-}
-
+#country-code,
 #population,
 #area,
 #capital,
 #capital-population,
 #neighbors {
     position: relative;
-    width: 280px;
-    margin-right: 0;
-    margin-left: 10px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    word-wrap: normal;
+    text-align: initial;
 }
 
 #map-container {
     position: relative;
-    display: inline-block;
-    width: 250px;
-    height: 250px;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+    display: block;
+    width: 447px;
+    height: auto;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
 }

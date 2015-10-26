@@ -1,7 +1,8 @@
 'use strict';
 
-app.controller('CountriesController', ['$scope', '$location', 'GeoNames', 'CountryProperties',
-        function($scope, $location, GeoNames, CountryProperties) {
+app.controller('CountriesController', ['$scope', '$rootScope', '$location', 'GeoNames', 'CountryProperties',
+        function($scope, $rootScope, $location, GeoNames, CountryProperties) {
+            $rootScope.style='no-scroll';
 
             var countriesSuccess = function (data) {
                 if (data.length > 0) {
@@ -14,6 +15,7 @@ app.controller('CountriesController', ['$scope', '$location', 'GeoNames', 'Count
             });
 
             $scope.setCountryDetails = function(country) {
+                CountryProperties.setCountryName(country["countryName"]);
                 CountryProperties.setCountryCode(country["countryCode"]);
                 CountryProperties.setCountryPopulation(country["population"]);
                 CountryProperties.setArea(country["areaInSqKm"]);
@@ -25,10 +27,16 @@ app.controller('CountriesController', ['$scope', '$location', 'GeoNames', 'Count
             };
     }
 ])
-    .controller('CountryDetailsController', ['$scope', 'GeoNames', 'CountryProperties',
-        function($scope, GeoNames, CountryProperties) {
+    .controller('CountryDetailsController', ['$scope', '$rootScope', 'GeoNames', 'CountryProperties',
+        function($scope, $rootScope, GeoNames, CountryProperties) {
+
+            $scope.init = function() {
+                $rootScope.style = 'scroll'; //show vertical scroll bar
+                $scope.getCountryDetails();
+            };
 
             $scope.getCountryDetails = function() {
+                $scope.countryName = CountryProperties.getCountryName();
                 $scope.countryCode = CountryProperties.getCountryCode();
                 $scope.countryPopulation = CountryProperties.getCountryPopulation();
                 $scope.area = CountryProperties.getArea();
@@ -49,10 +57,12 @@ app.controller('CountriesController', ['$scope', '$location', 'GeoNames', 'Count
                  });
 
                 var neighborsSuccess = function (data) {
-                    if (data.length > 0) {
+                    if (data === undefined) {
+                        $scope.neighbors === false;
+                    } else if (data.length > 0) {
                         $scope.neighbors = data;
                     } else {
-                        $scope.neighbors = "n/a";
+                        return
                     }
                 };
 
@@ -63,5 +73,6 @@ app.controller('CountriesController', ['$scope', '$location', 'GeoNames', 'Count
         }
     ])
 
-    .controller('HomeCtrl', function($scope) {
+    .controller('HomeCtrl', function($scope, $rootScope) {
+        $rootScope.style = "no-scroll";
     });

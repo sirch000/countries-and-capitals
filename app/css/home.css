@@ -3,9 +3,10 @@
     display: block;
     height: 540px;
     width: 50%;
-    margin-top: 285px;
+    min-width: 512px;
+    margin-top: 180px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
     padding: 0px;
 }
 
@@ -19,14 +20,10 @@
 }
 
 h3 {
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    margin: 10px 0 0 0;
     font-size: 22px;
     text-align: center;
     color: #444444;
-
 }
 
 #globe-main {

@@ -2,16 +2,20 @@
     overflow-h: hidden;
 }
 
+.no_scroll {
+    overflow-y: hidden;
+}
+
 thead {
     position: fixed;
     height: 45px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #0074D9;
+    background-color: #3d79a1 ;
     color: #FFFFFF;
     vertical-align: middle;
     width: 1200px;
-    border: 1px solid #0074D9;
+    border: 1px solid #3d79a1 ;
 }
 
 th {
@@ -24,7 +28,7 @@ td {
 	color: #3E3E3E;
     height: 40px;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     border: 1px solid #CCC;
     width: 200px;
 }
@@ -35,6 +39,11 @@ td:hover {
 
 tr {
     position: relative;
+}
+
+.countries-table {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 table {
@@ -79,9 +88,9 @@ tbody {
     left: 50%;
     margin-top: 5px;
     transform: translate(-50%, 50%);
-    border: 1px solid #0074D9;
+    border: 1px solid #3d79a1;
     color: #FFFFFF;
-    background-color: #0074D9;
+    background-color: #3d79a1;
     font-size: inherit;
 }
 

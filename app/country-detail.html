@@ -1,21 +1,21 @@
-<div class="header" ng-init="getCountryDetails()">
-    <h1>Countries & Capitals</h1>
+<div class="header" ng-init="init()">
+    <h1 class="header-text">Countries & Capitals</h1>
     <hr>
-    <h1 id="country-code">{{countryCode}}</h1>
-    <div id="flag-container">
-        <img ng-src="{{countryFlag}}"/>
-    </div>
-    <div id="country-details-container">
-        <div class="details">
-            <p id="population"><strong>Population of Country: </strong> {{countryPopulation | number}}</p>
-            <p id="area"><strong>Area: </strong>{{area | number}} square km</p>
-            <p id="capital"><strong>Capital: </strong>{{capital}}</p>
-            <p id="capital-population"><strong>Population of Capital: </strong>{{capitalPopulation | number}}</p>
-            <p id="neighbors"><strong>Neighbors: </strong>{{neighbors[0]["countryName"]}}, {{neighbors[1]["countryName"]}}, {{neighbors[2]["countryName"]}}</p>
+    <h2 id="country-name">{{countryName}}</h2>
+    <div id="main-details-container">
+        <div id="flag-container">
+            <img id="flag" ng-src="{{countryFlag}}" width="447px" height="302px"/>
+        </div>
+        <div id="details-container">
+                <p id="country-code"><strong>Country Code: </strong>{{countryCode}}</p>
+                <p id="population"><strong>Population of Country: </strong> {{countryPopulation | number}}</p>
+                <p id="area"><strong>Area: </strong>{{area | number}} square km</p>
+                <p ng-show="capital" id="capital"><strong>Capital: </strong>{{capital}}</p>
+                <p id="capital-population"><strong>Population of Capital: </strong>{{capitalPopulation | number}}</p>
+                <p ng-show="neighbors" id="neighbors"><strong>Neighbors: </strong>{{neighbors[0]["countryName"]}}<span ng-show="neighbors.length > 1">, </span>{{neighbors[1]["countryName"]}}<span ng-show="neighbors.length > 2">, </span>{{neighbors[2]["countryName"]}}</p>
         </div>
         <div id="map-container">
-            <img ng-src="{{mapImage}}"/>
+            <img id="map" ng-src="{{mapImage}}"/>
         </div>
-    <a href="#/countries"><button>Browse Countries</button></a>
     </div>
 </div>
