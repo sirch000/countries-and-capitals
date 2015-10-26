@@ -4,35 +4,42 @@
     -ms-user-select: none;      /* IE 10+ */
     user-select: none; 
     font-family: 'Source Sans Pro', sans-serif;
+    z-index: initial;
 }
+
 body {
-    overflow: hidden;
+    height: 700px;
+    overflow-x: hidden;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.no-scroll {
+    overflow-y: hidden;
 }
 
 .header {
-    display: block;
-    position: static;
-    margin-top: 2%;
+    position: relative;
     height: 60px;
-    min-width: 50%;
+    min-width: 400px;
     width: 50%;
-    z-index: 99998;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    margin: 30px auto 10px 25%;
 }
 
-h1 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
+.header-text {
+    position: relative;
+    margin: 0;
+    padding-bottom: 0;
     font-size: 32px;
-    text-align: center;
     color: #444444;
 }
 
 hr {
-    margin-top: 1%;
+    margin-top: 15px;
+    margin-bottom: 10px;
     width: 85%;
     color: #444444;
 }

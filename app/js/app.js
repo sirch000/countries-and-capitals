@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('app', ['ngRoute'])
+var app = angular.module('app', ['ngRoute', 'truncate'])
 	.config(function($routeProvider){
         $routeProvider.when('/', {
             templateUrl: './home.html',
@@ -8,7 +8,7 @@ var app = angular.module('app', ['ngRoute'])
         })
         .when('/countries', {
             templateUrl : './countries.html',
-            controller : 'CountriesController'
+            controller : 'CountriesController',
         })
         .when('/countries/country/:country', {
             templateUrl : './country-detail.html',

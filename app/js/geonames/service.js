@@ -1,4 +1,5 @@
 app.service('CountryProperties', function () {
+    var countryName;
     var countryCode;
     var countryPopulation;
     var area;
@@ -8,6 +9,12 @@ app.service('CountryProperties', function () {
     var mapImage;
 
     return {
+        getCountryName: function () {
+            return countryName;
+        },
+        setCountryName: function(value) {
+            countryName = value;
+        },
         getCountryCode: function () {
             return countryCode;
         },
