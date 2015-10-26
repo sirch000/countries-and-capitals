@@ -78,30 +78,3 @@ img#map {
     margin-right: auto;
     padding-bottom: 40px;
 }
-
-/*
-#browse-countries {
-
-}
-
-#browse-countries {
-    position: relative;
-    height: 40px;
-    width: 100px;
-    padding: 0px;
-    left: 50%;
-    margin-top: 5px;
-    transform: translate(-50%, 50%);
-    border: 1px solid #0074D9;
-    color: #FFFFFF;
-    background-color: #0074D9;
-    font-size: inherit;
-}
-
-#browse-countries:hover {
-    cursor: pointer;
-}
-
-#browse-countries:active {
-
-}*/

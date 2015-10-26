@@ -10,10 +10,9 @@
                 <p id="country-code"><strong>Country Code: </strong>{{countryCode}}</p>
                 <p id="population"><strong>Population of Country: </strong> {{countryPopulation | number}}</p>
                 <p id="area"><strong>Area: </strong>{{area | number}} square km</p>
-                <p id="capital"><strong>Capital: </strong>{{capital}}</p>
+                <p ng-show="capital" id="capital"><strong>Capital: </strong>{{capital}}</p>
                 <p id="capital-population"><strong>Population of Capital: </strong>{{capitalPopulation | number}}</p>
-                <p ng-show="neighbors" id="neighbors"><strong>Neighbors: </strong>{{neighbors[0]["countryName"]}}, {{neighbors[1]["countryName"]}}, {{neighbors[2]["countryName"]}}</p>
-            <!--<a href="#/countries"><button id="browse-countries">Browse Countries</button></a>-->
+                <p ng-show="neighbors" id="neighbors"><strong>Neighbors: </strong>{{neighbors[0]["countryName"]}}<span ng-show="neighbors.length > 1">, </span>{{neighbors[1]["countryName"]}}<span ng-show="neighbors.length > 2">, </span>{{neighbors[2]["countryName"]}}</p>
         </div>
         <div id="map-container">
             <img id="map" ng-src="{{mapImage}}"/>
