@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('app', ['ngRoute', 'truncate'])
+var app = angular.module('app', ['ngRoute'])
 	.config(function($routeProvider){
         $routeProvider.when('/', {
             templateUrl: './home.html',
